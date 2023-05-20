@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>if else</title>
+    <script>
+        function Addevenodd() {
+            var number = document.getElementById("no").value;
+            if (number % 2 == 0) {
+                document.getElementById("display").innerHTML = "enter no is even";
+            } else {
+                alert("no is odd")
+            }
+            var no1 = document.getElementById("no").value;
+            var no2 = document.getElementById("no1").value;
+            number1 = Number(no1);
+            number2 = Number(no2);
+            if (number1 > number2) {
+                document.getElementById("displya2").innerHTML = "number1 is greater than number2";
+            } else {
+                alert("no is smaller than number1");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="conatainer">
+        <div class="row">
+            <div class="col-4 py-4 border" style="background-color: rgb(204, 222, 222);">
+                <h4>If Else Condition (even or odd)</h4>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="enter no1" id="no" class="form-control">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" placeholder="enter no2" id="no1" class="form-control">
+                    </div>
+                    <div class="col-4">
+                        <button class="btn-success" onclick="Addevenodd()"> Add </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <strong>
+                            <p id="display"></p>
+                        </strong>
+                        <strong id="displya2"></strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 py-4  mx-2 border" style="background-color: rgb(204, 222, 222);">
+                <h4>If Else Condition (pass or fail)</h4>
+
+                <input type="text" placeholder="enter student name" id="studname" class="form-control">
+                <div class="row py-3">
+                    <div class="col-3">
+                        <input type="text" placeholder="science" id="science" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="math" id="math" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="marathi" id="marathi" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="english" id="english" class="form-control">
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-6">
+                        <button onclick="Addstudentmarks()" class="btn-success"> Add</button>
+                    </div>
+                    <div class="col-6">
+                        <p id="dis_m"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+<script>
+    function Addstudentmarks(){
+
+        var stdname=document.getElementById("studname").value;
+        var sciencem=Number(document.getElementById("science").value);
+        var mathm=Number(document.getElementById("math").value);
+        var marathim=Number(document.getElementById("marathi").value);
+        var englishm=Number(document.getElementById("english").value);
+        var subjecttotal=sciencem +marathim+ mathm+ englishm;
+        if(subjecttotal>300){
+            document.getElementById("dis_m").innerHTML= stdname+" passed good";
+        }
+    }
+</script>
+</body>
+
+</html>
